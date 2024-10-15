@@ -1,0 +1,21 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools %}
+    {{ block.super }}
+    <div class="object-tools">
+        <ul class="grp-object-tools">
+            <!-- Button for exporting to Excel -->
+            <li>
+                <a href="{% url 'admin:worksession-export-excel' %}" class="grp-button">
+                    Export to Excel
+                </a>
+            </li>
+            <!-- Button for exporting to PDF -->
+            <li>
+                <a href="{% url 'admin:worksession-export-pdf' %}" class="grp-button">
+                    Export to PDF
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
